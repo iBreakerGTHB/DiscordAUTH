@@ -8,19 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="login-container">
-            <div class="login-form">
-                <h1>Welcome back!</h1>
-                <form action="signin_process.php" method="POST">
-                    <div class="input-container">
-                        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="content">
+            <div class="left-panel">
+                <!-- Discord logo or branding can go here -->
+                <img src="discord-logo.png" alt="Discord Logo">
+            </div>
+            <div class="right-panel">
+                <div class="signin-container">
+                    <div class="signin-form">
+                        <h1>Welcome back!</h1>
+                        <form action="signin_process.php" method="POST">
+                            <div class="input-container">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </div>
+                            <button type="submit">Sign In</button>
+                        </form>
+                        <p>Don't have an account? <a href="registration.html">Sign up here.</a></p>
                     </div>
-                    <div class="input-container">
-                        <input type="password" id="password" name="password" placeholder="Password" required>
-                    </div>
-                    <button type="submit">Sign In</button>
-                </form>
-                <p>Don't have an account? <a href="registration.html">Sign up here.</a></p>
+                </div>
             </div>
         </div>
     </div>
