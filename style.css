@@ -13,16 +13,40 @@ body {
     text-align: center;
 }
 
-.login-container {
-    background-color: #2e3338; /* Discord's login box background color */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.content {
+    display: flex;
+    background-color: #36393f; /* Discord's background color */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    overflow: hidden;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #7289da; /* Discord's left side color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel img {
+    width: 100px; /* You can replace this with your logo */
+}
+
+.right-panel {
+    flex: 1;
     padding: 20px;
-    width: 300px;
+}
+
+.signin-container {
+    background-color: #2e3338; /* Discord's login box background color */
+    border-radius: 4px;
+    padding: 20px;
     text-align: center;
 }
 
-.login-form h1 {
+.signin-form h1 {
     color: #fff; /* Discord's text color */
     font-size: 24px;
     margin-bottom: 20px;
