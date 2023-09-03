@@ -1,19 +1,23 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $confirm_password = $_POST["confirm_password"];
 
     // Basic validation (you should add more robust validation)
-    if (empty($username) || empty($email) || empty($password) || empty($confirm_password)) {
-        echo "All fields are required.";
-    } elseif ($password !== $confirm_password) {
-        echo "Passwords do not match.";
+    if (empty($email) || empty($password)) {
+        echo "Both email and password are required.";
     } else {
-        // Here, you would typically insert the user data into a database.
-        // You should also hash and salt the password before storing it securely.
-        echo "Account created successfully!";
+        // In a real-world application, you would query the database to validate the user's credentials.
+        // For demonstration purposes, we'll assume a static username and password.
+        $validEmail = "user@example.com";
+        $validPassword = "password123";
+
+        if ($email === $validEmail && $password === $validPassword) {
+            echo "Sign-in successful!";
+            // You can redirect the user to a dashboard or another page here.
+        } else {
+            echo "Invalid email or password. Please try again.";
+        }
     }
 }
 ?>
