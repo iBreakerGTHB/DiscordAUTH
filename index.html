@@ -1,30 +1,99 @@
-CREATE TABLE `gifts` (
-  `id` int(11) NOT NULL,
-  `gift_name` varchar(100) NOT NULL,
-  `start_date` varchar(100) NOT NULL,
-  `end_date` varchar(100) NOT NULL,
-  `code` varchar(100) NOT NULL,
-  `claim_at` varchar(100) NOT NULL,
-  `steal_date` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord-like Account Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create an Account</h1>
+            <form action="#" method="POST">
+                <div class="input-field">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #36393f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-CREATE TABLE `tokens` (
-  `user_id` text NOT NULL,
-  `username` text NOT NULL,
-  `avatar` text NOT NULL,
-  `email` text NOT NULL,
-  `phone` text NOT NULL,
-  `badges` int(10) NOT NULL,
-  `nitro_badges` int(10) NOT NULL,
-  `twofactor` varchar(100) NOT NULL,
-  `token` text NOT NULL,
-  `isflaged` int(10) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+.container {
+    background-color: #7289da;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
 
-ALTER TABLE `gifts`
-  ADD PRIMARY KEY (`id`);
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-ALTER TABLE `gifts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #7289da;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #677bc4;
+}
