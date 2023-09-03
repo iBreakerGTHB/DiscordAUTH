@@ -1,26 +1,47 @@
-/* Reset some default browser styles */
-body, html {
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #202225; /* Discord's background color */
+    background-color: #36393f; /* Discord's background color */
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Vertically center the content */
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    background-color: #36393f; /* Discord's background color */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    overflow: hidden;
+}
+
+.content-left {
+    flex: 1;
+    background-color: #7289da; /* Discord's left side color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-left img {
+    width: 100px; /* You can replace this with your logo */
+}
+
+.content-right {
+    flex: 1;
+    padding: 20px;
 }
 
 .signin-container {
-    background-color: #36393f; /* Discord's sign-in box background color */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #2e3338; /* Discord's login box background color */
+    border-radius: 4px;
     padding: 20px;
-    width: 300px; /* Adjust the width as needed */
-    text-align: center;
 }
 
 .signin-form h1 {
@@ -42,20 +63,20 @@ body, html {
     color: #fff;
 }
 
-.button {
+button {
     background-color: #7289da; /* Discord's button color */
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.button:hover {
+button:hover {
     background-color: #677bc4; /* Discord's button hover color */
 }
 
-/* Styling for the "Don't have an account" link */
 p a {
     color: #7289da;
     text-decoration: none;
